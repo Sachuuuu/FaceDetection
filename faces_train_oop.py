@@ -47,14 +47,12 @@ class face_train:
                             roi = image_array[y:y+h, x:x+w]
                             self.x_train.append(roi)
                             self.y_labels.append(id_)
-		#print(self.y_labels)
-		#print(self.x_train)
-        
+                            
     
-        with open('labels2.pickel', 'wb') as f:
+        with open('labels_t.pickel', 'wb') as f:
             pickle.dump(self.label_ids, f)
 
         self.recognizer.train(self.x_train, np.array(self.y_labels))
-        self.recognizer.save('trainer2.yml')
+        self.recognizer.save('trainer_t.yml')
         
 d = face_train()

@@ -1,1 +1,1 @@
-Please add person name and photos here
+Please add person name and photos here. Before running the code please delete this ReadMe file
